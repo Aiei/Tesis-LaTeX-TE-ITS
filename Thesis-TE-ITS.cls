@@ -52,7 +52,7 @@
 \titlespacing
     {\section}
     {0pt}
-    {0pt}
+    {1.5ex}
     {0pt}
 
 % Syntax untuk memasukkan gambar.
@@ -60,7 +60,7 @@
 \newcommand{\gambar}[4]{
     \begin{figure}
         \centering
-        \includegraphics[width=#4\textwidth]{#1}
+        \includegraphics[width=#4\textwidth]{gambar/#1}
         \caption{#2}
         \label{gambar:#3}
     \end{figure}
