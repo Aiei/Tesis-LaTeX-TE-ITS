@@ -10,19 +10,21 @@ Simulasi sistem kontrol nominal dilakukan dengan menggunakan dua kondisi awal su
     {posisi-kereta.png}
     {Posisi Kereta dengan Berbagai Kondisi Awal}
     {gambar:posisi-kereta}
-    {0.5}
+    {1}
+
+\section{Kontrol Nominal dengan Berbagai Jenis Kesalahan Sensor}
 
 Jenis kesalahan sensor yang digunakan dalam simulasi adalah constant offset atau bias $\beta$, dan kesalahan sensitivitas $\alpha_s$. Skenario kesalahan sensor tersebut terdapat dalam Tabel \ref{tabel:sinyal-kesalahan}.
 
-\begin{table}
+\begin{table}[H]
     \caption{Sinyal Kesalahan Sensor}
     \centering
-    \begin{tabular}{ccc}
+    \begin{tabular}{ ccc }
         \toprule
-        Waktu (detik ke-) & Jenis & Magnitudo
+        Waktu (detik ke-) & Jenis & Magnitudo \\
         \midrule
-        8 & \emph{sensitivity error} & $\alpha_s$ = 0.5
-        15 & \emph{bias error} & $\beta$ = 0,15 sin 0,5$t$
+        8 & \textit{sensitivity error} & $\alpha_s$ = 0.5 \\
+        15 & \textit{bias error} & $\beta$ = 0,15 sin 0,5$t$ \\
         \bottomrule
     \end{tabular}
     \label{tabel:sinyal-kesalahan}

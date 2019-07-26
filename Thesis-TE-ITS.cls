@@ -20,6 +20,8 @@
 \usepackage{longtable}          % support multi-page pada tabel
 \usepackage{caption}            % support styling caption
 \usepackage{booktabs}           % support styling border tabel
+\usepackage{etoolbox}
+\usepackage{float}
 
 \usepackage[
     top=35mm,       % tepi atas 3,5 cm
@@ -40,12 +42,20 @@
     aboveskip=6pt,              % margin vertical caption
 }
 
+% mencegah hyphen yang tidak perlu
 \tolerance=1
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \hbadness=10000
 
-\usepackage{lipsum}
+% halaman sengaja dikosongkan
+% "Fachri made this, I have no idea how this works" -- Aiei
+\def\kosong{
+  \vspace*{\fill}
+  \begin{center}\textit{Halaman ini sengaja dikosongkan}\end{center}
+  \vfill
+}
+\patchcmd{\cleardoublepage}{\hbox{}}{\kosong}{}{}
 
 \titleformat    % format BAB
     {\chapter}
@@ -59,7 +69,7 @@
     {\chapter}
     {0pt}
     {-4ex}
-    {12pt}
+    {4ex}
 
 \titleformat    % format section
     {\section}
@@ -70,8 +80,10 @@
 \titlespacing
     {\section}
     {0pt}
-    {1.5ex}
+    {3ex}
     {0pt}
+
+\raggedbottom   % mencegah jarak yang tidak konsisten antar paragraf
 
 \newcommand{\bab}[1]{
     \chapter{#1}
@@ -80,7 +92,7 @@
 % syntax bantuan untuk memasukkan gambar.
 % \gambar{LOKASI_GAMBAR}{TEXT_CAPTION}{LABEL_REFERENSI}{UKURAN}
 \newcommand{\gambar}[4]{
-    \begin{figure}
+    \begin{figure}[H]
         \centering
         \includegraphics[width=#4\textwidth]{gambar/#1}
         \caption{#2}

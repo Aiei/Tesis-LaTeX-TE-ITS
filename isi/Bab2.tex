@@ -22,7 +22,7 @@ Nomor dan judul tabel ditulis di sisi kiri di atas tabel. Nomor tabel disesuaika
     {gambar:gaya-gesek-pendulum}
     {0.55}
    
-\begin{table}
+\begin{table}[H]
     \caption{Parameter Sistem Pendulum-Kereta}
     \centering
     \begin{tabular}{ lcl } 
@@ -43,13 +43,10 @@ Nomor dan judul tabel ditulis di sisi kiri di atas tabel. Nomor tabel disesuaika
 \section{Model Fuzzy Takagi-Sugeno}
 
 Secara umum, sistem nonlinear dapat ditulis sebagai $x = f(x,u)$  dengan x merupakan variabel keadaan dan $u$ adalah input kontrol. Untuk membangun model fuzzy Takagi-Sugeno (T-S), model linear dari sistem nonlinear diperoleh melalui linearisasi sistem terhadap beberapa titik operasi, $x_i^*$. Model linear tersebut memiliki bentuk sebagai berikut [3]:
-
 \rumus
     {x(t) = A_ix(t)+B_iu(t), i=1,2,3,...,r}
     {rumus-1}
-
 \noindent dengan
-
 \rumus
     {A_i = \left.\frac{\partial f(x)}{\partial x}\right|x=x_i^* ; B_i = \left.\frac{\partial f(x,u)}{\partial u}\right|x=x_i^*}
     {rumus-2}
