@@ -9,14 +9,17 @@
     bahasa      % bahasa indonesia
 ]{report}
 
-\usepackage[utf8]{inputenc}     % encoding
 \usepackage{graphicx}           % support gambar
 \usepackage{amsmath}            % support rumus
 \usepackage{algpseudocode}      % support pseudocode
 \usepackage[bahasa]{babel}      % support bahasa indonesia
 \usepackage{titlesec}           % style section dan chapter
-\usepackage{fontspec}
-\setmainfont{Times New Roman}
+\usepackage{fontspec}           % support custom font
+\usepackage{indentfirst}        % indentasi paragraf pertama
+\usepackage{multirow}           % support multirow pada tabel
+\usepackage{longtable}          % support multi-page pada tabel
+\usepackage{caption}            % support styling caption
+\usepackage{booktabs}           % support styling border tabel
 
 \usepackage[
     top=35mm,       % tepi atas 3,5 cm
@@ -25,15 +28,30 @@
     bottom=30mm     % tepi bawah 3,0 cm
 ]{geometry}
 
+\setmainfont{Times New Roman}           % font times new roman
 \setlength{\parindent}{1.5cm}           % indentasi 1.5 cm
-\usepackage{indentfirst}                % indentasi paragraf pertama
 \renewcommand{\baselinestretch}{1.5}    % jarak antar baris
+\renewcommand{\arraystretch}{0.7}       % tinggi row tabel
+\captionsetup{
+    format=hang,                % caption yang melebih satu baris jatuh tepat dibawah text
+    singlelinecheck=false,      % mencegah caption 1 baris menghiraukan settingan
+    justification=raggedright,  % caption rata kiri
+    labelsep=space,             % capton tanpa colon(:)
+    aboveskip=6pt,              % margin vertical caption
+}
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\usepackage{lipsum}
 
 \titleformat    % format BAB
     {\chapter}
     [display]
-    {\bfseries\large}
-    {BAB \centering\thechapter}
+    {\bfseries\large}           % huruf besar
+    {BAB \centering\thechapter} % \chapter = bab, rata tengah
     {0ex}
     {\vspace{0ex}\centering}    
     [\vspace{0ex}]
@@ -45,7 +63,7 @@
 
 \titleformat    % format section
     {\section}
-    {\bfseries\large}
+    {\bfseries}
     {\MakeUppercase{\thesection}}
     {1ex}
     {}
@@ -55,13 +73,26 @@
     {1.5ex}
     {0pt}
 
-% Syntax untuk memasukkan gambar.
+\newcommand{\bab}[1]{
+    \chapter{#1}
+}
+
+% syntax bantuan untuk memasukkan gambar.
 % \gambar{LOKASI_GAMBAR}{TEXT_CAPTION}{LABEL_REFERENSI}{UKURAN}
 \newcommand{\gambar}[4]{
     \begin{figure}
         \centering
         \includegraphics[width=#4\textwidth]{gambar/#1}
         \caption{#2}
-        \label{gambar:#3}
+        \label{#3}
     \end{figure}
+}
+
+% syntax bantuan untuk memasukkan rumus
+% \rumus{RUMUS}{LABEL_REFERENSI}
+\newcommand{\rumus}[2]{
+    \begin{equation}
+        #1
+        \label{#2}
+    \end{equation}
 }

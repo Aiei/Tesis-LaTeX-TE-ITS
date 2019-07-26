@@ -12,30 +12,47 @@ Dasar teori merupakan semua teori yang dipilih berdasarkan kajian pustaka yang m
 
 Semua referensi yang digunakan atau dikutip harus dicantumkan dalam daftar pustaka. Pengutipan dapat dilakukan dengan dua cara, yaitu menggunakan gaya Harvard atau IEEE. Untuk gaya Harvard, nama belakang pengarang dan tahun penerbitan/ publikasi harus dicantumkan setelah kutipan di dalam tanda kurung kecil, misal (Siregar, 2006). Sedangkan untuk gaya IEEE, penulisan hanya menggunakan nomor publikasi dalam kurung siku [1]. Penjelasan tentang pengutipan secara lengkap dapat dibaca di panduan pengutipan gaya IEEE (IEEE style) yang terdapat di Teras Teknik Elektro ITS.
 
-Semua gambar dan tabel harus jelas/tidak kabur/buram. Ukuran huruf pada gambar dan tabel harus dapat dibaca oleh mata normal dengan mudah. Gambar dan tabel diletakkan di tengah halaman (center alignment). Contoh gambar dapat dilihat pada Gambar \label{gambar-gaya-gesek-pendulum}. Penjelasan gambar ataupun tabel sebaiknya dikutip dalam kalimat sebelum/setelah gambar/tabel tersebut, contoh pengutipan dalam teks: nilai parameter sistem pendulum-kereta yang digunakan dalam simulasi dan implementasi terdapat dalam Tabel 2.1.
+Semua gambar dan tabel harus jelas/tidak kabur/buram. Ukuran huruf pada gambar dan tabel harus dapat dibaca oleh mata normal dengan mudah. Gambar dan tabel diletakkan di tengah halaman (\emph{center alignment}). Contoh gambar dapat dilihat pada Gambar \ref{gambar:gaya-gesek-pendulum}. Penjelasan gambar ataupun tabel sebaiknya dikutip dalam kalimat sebelum/setelah gambar/tabel tersebut, contoh pengutipan dalam teks: nilai parameter sistem pendulum-kereta yang digunakan dalam simulasi dan implementasi terdapat dalam Tabel \ref{tabel:pendulum}.
 
-Nomor dan judul tabel ditulis di sisi kiri di atas tabel. Nomor tabel disesuaikan dengan letak tabel tersebut di dalam bab, misalkan: Tabel 2.1. Parameter Sistem Pendulum-Kereta [2]. Judul tabel ditulis dengan cara title case kecuali untuk kata sambung dan kata depan. Tabel dibuat dengan jarak spasi 1 (lihat  Tabel 2.1).
+Nomor dan judul tabel ditulis di sisi kiri di atas tabel. Nomor tabel disesuaikan dengan letak tabel tersebut di dalam bab, misalkan: Tabel \ref{tabel:pendulum}. Parameter Sistem Pendulum-Kereta [2]. Judul tabel ditulis dengan cara title case kecuali untuk kata sambung dan kata depan. Tabel dibuat dengan jarak spasi 1 (lihat  Tabel Tabel \ref{tabel:pendulum}).
 
 \gambar
     {gaya-gesek-pendulum.png}
     {Gaya Gesek pada Sistem Pendulum-Kereta}
-    {gambar-gaya-gesek-pendulum}
-    {0.6}
+    {gambar:gaya-gesek-pendulum}
+    {0.55}
+   
+\begin{table}
+    \caption{Parameter Sistem Pendulum-Kereta}
+    \centering
+    \begin{tabular}{ lcl } 
+        \toprule
+        \multicolumn{1}{c}{\textbf{Parameter}} & \multicolumn{1}{c}{\textbf{Simbol}} & \multicolumn{1}{c}{\textbf{Nilai}} \\
+        \midrule
+        Massa kereta (kg) & $m_c$ & 1,12 \\
+        Massa pendulum (kg) & $m_p$ & 0,12 \\
+        Momen inersia (kg.m$^2$) & $J$ & 0,0315 \\
+        Jarak sumbu rotasi terhadap pusat massa (m) & $l$ & 0,01679 \\
+        Koefisien gesek pendulum (kg.m$^2$/s) & $fp$ & 0,0139 \\
+        Percepatan gravitasi (m/s$^2$) & $g$ & 9,8 \\
+        \bottomrule
+    \end{tabular}
+    \label{tabel:pendulum}
+\end{table}
 
 \section{Model Fuzzy Takagi-Sugeno}
 
 Secara umum, sistem nonlinear dapat ditulis sebagai $x = f(x,u)$  dengan x merupakan variabel keadaan dan $u$ adalah input kontrol. Untuk membangun model fuzzy Takagi-Sugeno (T-S), model linear dari sistem nonlinear diperoleh melalui linearisasi sistem terhadap beberapa titik operasi, $x_i^*$. Model linear tersebut memiliki bentuk sebagai berikut [3]:
 
-\begin{equation}
-x(t) = A_ix(t)+B_iu(t), i=1,2,3,...,r
-\end{equation}
+\rumus
+    {x(t) = A_ix(t)+B_iu(t), i=1,2,3,...,r}
+    {rumus-1}
 
 \noindent dengan
 
-\begin{equation}
-A_i = \left.\frac{\partial f(x)}{\partial x}\right|x=x_i^* ; B_i = \left.\frac{\partial f(x,u)}{\partial u}\right|x=x_i^*
-%F=\left.\frac{\partial f}{\partial x}\right|_{\hat x_{k-1}}
-\end{equation}
+\rumus
+    {A_i = \left.\frac{\partial f(x)}{\partial x}\right|x=x_i^* ; B_i = \left.\frac{\partial f(x,u)}{\partial u}\right|x=x_i^*}
+    {rumus-2}
 
 \section{Observer Fuzzy}
 
