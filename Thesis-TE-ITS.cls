@@ -22,6 +22,8 @@
 \usepackage{booktabs}           % support styling border tabel
 \usepackage{etoolbox}
 \usepackage{float}
+\usepackage[bookmarksnumbered,pdfborder={0 0 0}]{hyperref}  % clickable pdf tanpa style
+\usepackage{setspace}
 
 \usepackage[
     top=35mm,       % tepi atas 3,5 cm
@@ -32,8 +34,8 @@
 
 \setmainfont{Times New Roman}           % font times new roman
 \setlength{\parindent}{1.5cm}           % indentasi 1.5 cm
-\renewcommand{\baselinestretch}{1.5}    % jarak antar baris
-\renewcommand{\arraystretch}{0.7}       % tinggi row tabel
+%\renewcommand{\baselinestretch}{1.5}    % basis jarak antar baris
+\renewcommand{\arraystretch}{1}       % tinggi row tabel
 \captionsetup{
     format=hang,                % caption yang melebih satu baris jatuh tepat dibawah text
     singlelinecheck=false,      % mencegah caption 1 baris menghiraukan settingan
@@ -41,6 +43,17 @@
     labelsep=space,             % capton tanpa colon(:)
     aboveskip=6pt,              % margin vertical caption
 }
+
+% daftar isi, gambar, tabel.
+\usepackage{titlesec}
+\usepackage{titletoc}
+%\dottedcontents{chapter}[-12pt]{\vspace{6pt}BAB \hspace{10pt}}{10pt}{3pt}
+\dottedcontents{chapter}[0pt]{\vspace{12pt}}{12pt}{3pt}
+\dottedcontents{section}[12pt]{\vspace{6pt}}{24pt}{3pt}
+\renewcommand{\figurename}{Gambar}
+\dottedcontents{figure}[0pt]{Gambar \hspace{24pt}}{24pt}{3pt}
+\renewcommand{\tablename}{Tabel}
+\dottedcontents{table}[0pt]{Tabel \hspace{24pt}}{24pt}{3pt}
 
 % mencegah hyphen yang tidak perlu
 \tolerance=1
