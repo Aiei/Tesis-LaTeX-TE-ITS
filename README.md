@@ -13,13 +13,11 @@ Berikut adalah daftar software yang [Aiei](https://github.com/Aiei) gunakan. Aka
 Selain syntax dasar LaTeX, ditambahkan beberapa syntax tambahan untuk mempermudah penulisan.
 
 Gambar 
-
 ```
 \gambar{LOKASI_GAMBAR}{TEXT_CAPTION}{LABEL_REFERENSI}{UKURAN}
 ```
 
 Rumus 
-
 ```
 \rumus{RUMUS}{LABEL_REFERENSI}
 ```
@@ -27,25 +25,21 @@ Rumus
 ### Level penulisan
 
 Bab
-
 ```
 \chapter{chapter}
 ```
 
 Sub-bab lvl 1
-
 ```
 \section{section}
 ```
 
 Sub-bab lvl 2
-
 ```
 \subsection{subsection}
 ```
 
 Sub-bab lvl 3
-
 ```
 \subsubsection{subsubsection}
 ```
