@@ -76,3 +76,7 @@ Apabila menggunakan VSCode, disarankan untuk menambah konfigurasi berikut pada `
 ],
 "latex-workshop.latex.outDir": "%DIR%/output"
 ```
+
+## Lisensi
+
+Anda dapat mengunduh, menyebarkan, modifikasi dan lain-lain sesuai dengan peraturan lisensi [WTFPL](http://www.wtfpl.net/).
