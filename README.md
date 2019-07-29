@@ -9,34 +9,34 @@ WARNING: Modifikasi masih perlu ditambahkan menyesuaikan format resmi yang berla
 Selain syntax dasar LaTeX, ditambahkan beberapa syntax tambahan untuk mempermudah penulisan.
 
 Gambar 
-```
+```latex
 \gambar{LOKASI_GAMBAR}{TEXT_CAPTION}{LABEL_REFERENSI}{UKURAN}
 ```
 
 Rumus 
-```
+```latex
 \rumus{RUMUS}{LABEL_REFERENSI}
 ```
 
 ### Level penulisan
 
 Bab
-```
+```latex
 \chapter{chapter}
 ```
 
 Sub-bab lvl 1
-```
+```latex
 \section{section}
 ```
 
 Sub-bab lvl 2
-```
+```latex
 \subsection{subsection}
 ```
 
 Sub-bab lvl 3
-```
+```latex
 \subsubsection{subsubsection}
 ```
 
@@ -50,7 +50,7 @@ Berikut adalah daftar software yang [Aiei](https://github.com/Aiei) gunakan. Aka
 
 Apabila menggunakan VSCode, disarankan untuk menambah konfigurasi berikut pada `settings`
 
-```
+```json
 "latex-workshop.latex.recipes": [
     {
         "name": "latexmk",
