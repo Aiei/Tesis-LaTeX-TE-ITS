@@ -1,17 +1,41 @@
 # Template LaTeX Buku Tesis Teknik Elektro ITS
 
-## Syntax Dasar
+## Syntax Tambahan
 
-Gambar ```\gambar{LOKASI_GAMBAR}{TEXT_CAPTION}{LABEL_REFERENSI}{UKURAN}```
+Gambar 
 
-Rumus ```\rumus{RUMUS}{LABEL_REFERENSI}```
+```
+\gambar{LOKASI_GAMBAR}{TEXT_CAPTION}{LABEL_REFERENSI}{UKURAN}
+```
 
-Daftar level penulisan :
+Rumus 
 
-Bab ```\chapter{chapter}```
+```
+\rumus{RUMUS}{LABEL_REFERENSI}
+```
 
-Sub-bab lvl 1 ```\section{section}```
+### Level penulisan
 
-Sub-bab lvl 2 ```\subsection{subsection}```
+Bab
 
-Sub-bab lvl 3 ```\subsubsection{subsubsection}```
+```
+\chapter{chapter}
+```
+
+Sub-bab lvl 1
+
+```
+\section{section}
+```
+
+Sub-bab lvl 2
+
+```
+\subsection{subsection}
+```
+
+Sub-bab lvl 3
+
+```
+\subsubsection{subsubsection}
+```
