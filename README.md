@@ -1,6 +1,8 @@
 # Template LaTeX Buku Tesis Teknik Elektro ITS
 
+Template buku tesis berbasis LaTeX yang digunakan mahasiswa Teknik Elektro ITS. Dapat digunakan sebagai dasar awal penulisan buku tesis.
 
+WARNING: Modifikasi masih perlu ditambahkan menyesuaikan format resmi yang berlaku.
 
 ## Syntax Tambahan
 
