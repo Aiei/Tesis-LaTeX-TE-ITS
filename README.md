@@ -1,5 +1,11 @@
 # Template LaTeX Buku Tesis Teknik Elektro ITS
 
+## Saran Setup
+
+* [Visual Studio Code](https://code.visualstudio.com/) - Text editor
+* [LaTex Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) - Extension VSCode untuk compile LaTeX
+* [TeX Live](https://www.tug.org/texlive/) - Distribusi LaTeX
+
 ## Syntax Tambahan
 
 Gambar 
