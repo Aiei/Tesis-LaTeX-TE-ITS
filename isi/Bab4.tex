@@ -1,0 +1,31 @@
+\chapter{HASIL DAN PEMBAHASAN}
+
+Pada bagian ini, perlu diberikan suatu pengantar yang memuat hal-hal yang akan dilakukan beserta analisis yang digunakan dalam menyelesaikan penelitian. Selanjutnya secara terperinci dan tahap demi tahap tujuan penelitian dibahas dan dianalisis secara detail dan tajam, dengan menggunakan metode yang telah diberikan dalam metodologi penelitian, sampai diperoleh suatu hasil penelitian. Analisis dan pembahasan ini, dilakukan untuk semua tujuan yang telah ditetapkan pada tujuan penelitian.
+
+\section{Kontrol Nominal dengan Berbagai Kondisi Awal tanpa Kesalahan (\textit{Fault-free Case})}
+
+Simulasi sistem kontrol nominal dilakukan dengan menggunakan dua kondisi awal sudut pendulum, yaitu 0,2 rad, dan 0,4 rad, sedangkan kondisi awal variabel lainnya adalah nol. Posisi kereta hasil simulasi yang dilakukan terdapat dalam Gambar \ref{gambar:posisi-kereta}.
+
+\gambar
+    {posisi-kereta.png}
+    {Posisi Kereta dengan Berbagai Kondisi Awal}
+    {gambar:posisi-kereta}
+    {1}
+
+\section{Kontrol Nominal dengan Berbagai Jenis Kesalahan Sensor}
+
+Jenis kesalahan sensor yang digunakan dalam simulasi adalah constant offset atau bias $\beta$, dan kesalahan sensitivitas $\alpha_s$. Skenario kesalahan sensor tersebut terdapat dalam Tabel \ref{tabel:sinyal-kesalahan}.
+
+\begin{table}[H]
+    \caption{Sinyal Kesalahan Sensor}
+    \centering
+    \begin{tabular}{ ccc }
+        \toprule
+        Waktu (detik ke-) & Jenis & Magnitudo \\
+        \midrule
+        8 & \textit{sensitivity error} & $\alpha_s$ = 0.5 \\
+        15 & \textit{bias error} & $\beta$ = 0,15 sin 0,5$t$ \\
+        \bottomrule
+    \end{tabular}
+    \label{tabel:sinyal-kesalahan}
+\end{table}

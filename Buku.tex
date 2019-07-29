@@ -1,0 +1,45 @@
+\documentclass{Thesis-TE-ITS}
+
+\title{Buku Thesis Teknik Elektro ITS}
+\author{John Doe}
+\date{July 2019}
+
+\begin{document}
+\pagenumbering{roman}
+\addcontentsline{toc}{chapter}{PERNYATAAN KEASLIAN TESIS}
+\input{isi/PernyataanKeaslian.tex}
+\cleardoublepage
+\addcontentsline{toc}{chapter}{ABSTRAK}
+\input{isi/Abstrak.tex}
+\cleardoublepage
+\addcontentsline{toc}{chapter}{ABSTRACT}
+\input{isi/Abstract.tex}
+\cleardoublepage
+\addcontentsline{toc}{chapter}{KATA PENGANTAR}
+\input{isi/KataPengantar.tex}
+\cleardoublepage
+\singlespacing
+\input{static/DaftarIsi.tex}
+\cleardoublepage
+\input{static/DaftarGambar.tex}
+\cleardoublepage
+\input{static/DaftarTabel.tex}
+\cleardoublepage
+\begin{spacing}{1.5}
+\pagenumbering{arabic}
+\input{isi/Bab1.tex}
+\cleardoublepage
+\input{isi/Bab2.tex}
+\cleardoublepage
+\input{isi/Bab3.tex}
+\cleardoublepage
+\input{isi/Bab4.tex}
+\cleardoublepage
+\input{isi/Bab5.tex}
+\cleardoublepage
+\input{static/DaftarPustaka.tex}
+\bibliography{isi/Referensi}
+\cleardoublepage
+\end{spacing}
+
+\end{document}
