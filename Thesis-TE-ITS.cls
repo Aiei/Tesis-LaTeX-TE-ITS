@@ -49,7 +49,8 @@
 \usepackage{titletoc}
 %\dottedcontents{chapter}[-12pt]{\vspace{6pt}BAB \hspace{10pt}}{10pt}{3pt}
 \dottedcontents{chapter}[0pt]{\vspace{12pt}}{12pt}{3pt}
-\dottedcontents{section}[12pt]{\vspace{6pt}}{24pt}{3pt}
+\dottedcontents{section}[24pt]{\vspace{6pt}}{24pt}{3pt}
+\dottedcontents{subsection}[42pt]{\vspace{6pt}}{36pt}{3pt}
 \renewcommand{\figurename}{Gambar}
 \dottedcontents{figure}[0pt]{Gambar \hspace{24pt}}{24pt}{3pt}
 \renewcommand{\tablename}{Tabel}
@@ -84,17 +85,17 @@
     {-4ex}
     {4ex}
 
-\titleformat    % format section
-    {\section}
-    {\bfseries}
-    {\MakeUppercase{\thesection}}
-    {1ex}
-    {}
-\titlespacing
-    {\section}
-    {0pt}
-    {3ex}
-    {0pt}
+\titleformat{\section}{\bfseries}{\MakeUppercase{\thesection}}{1ex}{}
+\titlespacing{\section}{0pt}{3ex}{0pt}
+
+\titleformat{\subsection}{\bfseries}{\MakeUppercase{\thesubsection}}{1ex}{}
+\titlespacing{\subsection}{0pt}{3ex}{0pt}
+
+\titleformat{\subsubsection}{}{\MakeUppercase{\thesubsubsection}}{1ex}{}
+\titlespacing{\subsubsection}{0pt}{3ex}{0pt}
+
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
 
 \raggedbottom   % mencegah jarak yang tidak konsisten antar paragraf
 
@@ -120,4 +121,11 @@
         #1
         \label{#2}
     \end{equation}
+}
+
+\newcommand{\heading}[1]{
+    \begin{center}
+    \large\textbf{#1}
+    \end{center}
+    \vspace{1ex}
 }
